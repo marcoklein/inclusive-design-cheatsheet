@@ -13,7 +13,7 @@
 ### Responsive design
 Define content breakpoints -> one design for all.
 
-### Allow pich-to-zoom
+### Allow pinch-to-zoom
 ```html
 <meta name="viewport" content="width=device-with, initial-scale=1.0">
 
