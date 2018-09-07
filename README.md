@@ -1,4 +1,4 @@
-# inlusive-design-cheatsheet
+# Inclusive Design Cheatsheet
 
 ### Always add a Doctype.
 ```html
