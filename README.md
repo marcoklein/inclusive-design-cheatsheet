@@ -101,3 +101,33 @@ Shown only to keyboard users to directly go to the main content!
   </body>
 </html>
 ```
+
+## Paragraph
+### Set max width for reading comfortability
+```css
+main {
+  max-width: 60rem;
+}
+
+@media (min-width: 120rem) {
+  html {
+    font-size: 150%; /* default is 100% */
+  }
+}
+```
+### Relative line height
+```css
+p {
+  font-size: 1rem; /* the default */
+  line-height: 1.5;
+}
+```
+### Add contrast
+```css
+main {
+  background: #EEE;
+}
+p {
+  color: #222;
+}
+```
