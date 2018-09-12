@@ -131,3 +131,50 @@ p {
   color: #222;
 }
 ```
+### Improve link underlines
+```css
+p a {
+  text-decoration: none;
+  text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+    0 0.05em 0 #fff, 0 -0.05em 0 #fff,
+    0.1em 0 0 #fff, -0.1em 0 0 #fff,
+    0 0.1em 0 #fff, 0 -0.1em 0 #fff;
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-repeat: repeat-x;
+  background-position: bottom 0.05em center;
+  background-size: 100% 0.05em;
+}
+```
+And fallback for older browsers
+```css
+.ie-lte-9 a {
+  text-decoration: underline;
+}
+```
+### Change links focus rendering
+```css
+p a:focus {
+  outline: none;
+  background-color: #cef;
+  text-shadow: 0.05em 0 0 #cef, -0.05em 0 0 #cef,
+    0 0.05em 0 #cef, 0 -0.05em 0 #cef,
+    0.1em 0 0 #cef, -0.1em 0 0 #cef,
+    0 0.1em 0 #cef, 0 -0.1em 0 #cef;
+```
+### Mark external links with icon
+```css
+[href^="http"]:not([href*="domain.com"])::after {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('path/to/external-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75% auto;
+  /* alternative text rules */
+  content: '(external link)';
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 1em; /* width of icon */
+}
+```
